@@ -1,0 +1,416 @@
+<html>
+  <head>
+    <title>Chatbot Widget</title>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+
+    <style>
+        .footer{
+    text-align: center;
+    bottom: 0%;
+    padding-top: 30px;
+        }
+
+        body {
+  font-family: "Open Sans", sans-serif;
+    /* Multiple background images */
+    background: linear-gradient(to top,rgb(245, 184, 72),skyblue,rgb(139, 239, 139));
+    /*background-image: url('./static/img/body2.jpg');*/
+    /* Background position */
+    background-position: center;
+
+    /* Background size */
+    background-size: contain;
+
+    /* Background repeat */
+    background-repeat: no-repeat;
+
+    /* Background attachment to make it scrollable */
+    background-attachment: scroll;
+    
+    /* Other styling to ensure the page is scrollable */
+    height: auto;
+   /* Example height to enable scrolling */
+    margin: 0 auto;
+    padding: 0;
+    line-height: 1.6;
+    justify-content: center;
+}   
+        fieldset {
+            display: flex;
+            width: 90%;
+            margin: 20px;
+            margin-top: 40px;
+            border: 1px solid red;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-left: 100px;
+            margin-right: 100px;
+            padding-right: 20px;
+        }
+        legend {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .left-side {
+            width: 50%;
+            background-color: #f4f4f4;
+            color: #333;
+            box-sizing: border-box;
+            padding: 20px;
+            margin-right: 10px; /* Add margin to the right of the left block */
+        }
+        .right-side {
+            width: 50%;
+            padding: 20px;
+            background-color: #e8e8e8;
+            color: #333;
+            box-sizing: border-box;
+            margin-left: 10px; /* Add margin to the left of the right block */
+        }
+        .image-name-container {
+            background: linear-gradient(to bottom right, #b0b0b0, #d0d0d0);
+            padding: 20px;
+            text-align: center;
+        }
+        .image-name-container img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .image-name-container .name {
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .content1 {
+            padding: 5px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #b0b0b0;
+            padding-bottom: 5px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .social-media {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .social-media a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #0066cc;
+            display: inline-block;
+        }
+        .social-media img {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+            border-radius: 50%;
+        }
+        .social-media a:hover {
+            text-decoration: underline;
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+        
+        }
+        .carousel img {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            display: none;
+        }
+        .carousel img.active {
+            display: block;
+        }
+        .carousel .text {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .nav{
+        background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    align-items: center;
+  }
+    img{
+      border-radius: 50%;
+    }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {background-color: #f1f1f1}
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  span{
+    margin-left: 100px;
+  }
+  /* table */
+  table {
+            display: flex;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <!--Import Google Icon Font-->
+    <!--link rel="stylesheet" href="./static/css/styles.css"-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <div class="nav">
+        <div class="dropdown">
+          <img src="./static/img/logo.jpg" width="30" height="30"  onclick="toggleDropdown()">
+          <div class="dropdown-content" id="dropdownMenu">
+            <a href="./home.html">Home</a>
+            <a href="#about">About Us</a>
+            <a href="./Features.html">Features</a>
+            <a href="./index.html">Logout</a>
+          </div>
+          <span style="font-size: 100%;">Aaruhi_Ai_Bot</span>
+        </div>
+        
+        <script>
+          function toggleDropdown() {
+            var dropdownMenu = document.getElementById("dropdownMenu");
+            if (dropdownMenu.style.display === "block") {
+              dropdownMenu.style.display = "none";
+            } else {
+              dropdownMenu.style.display = "block";
+            }
+          }
+        </script>
+        </div>
+    <div class="container">
+    <fieldset>
+      <legend>About Us</legend>
+      <div class="left-side">
+          <div class="image-name-container">
+              <img src="./static/img/profile.jpg" alt="Profile Picture">
+              <div class="name">Jovardhan Vijji</div>
+          </div>
+          <div class="content1">
+              <div class="section">
+                  <div class="section-title">Personal Details</div>
+                  <p>Name: Vijji Jovardhan</p>
+                  <p>Email: vijjijovardhan@gmail.com</p>
+                  <p>Phone: +91 9347535033</p>
+
+                  <p>DOB: 14/04/2004</p>
+                  <p>Address: 9-40-38,Pothina Adiyya Street,Vagu Center,Vijayawada,N.T.R District,Andhra Pradesh,52001.</p>
+              </div>
+              <div class="section">
+                  <div class="section-title">Education Qualifications</div>
+                  <table>
+                    <tr>
+                        <th>Course</th>
+                        <th>School/College</th>
+                        <th>Board/University</th>
+                        <th>Year of Passing</th>
+                        <th>Percentage</th>
+                    </tr>
+                    <tr>
+                        <td>Bachelor of Science(Data science)</td>
+                        <td>K.B.N College</td>
+                        <td>Krishna University</td>
+                        <td>2022-2025</td>
+                        <td>PURSUING</td>
+                    </tr>
+                    <tr>
+                        <td>Intermediate(M.P.C)</td>
+                        <td>K.B.N College</td>
+                        <td>Board of Intermediate Education,AP</td>
+                        <td>2019-2021</td>
+                        <td>679</td>
+                    </tr>
+                    <tr>
+                        <td>SSC</td>
+                        <td>S.T.R High School</td>
+                        <td>SSC</td>
+                        <td>2018-2019</td>
+                        <td>8.3</td>
+                    </tr>
+                </table>
+              </div>
+              <div class="section">
+                  <div class="section-title">Skills</div>
+                  <ul>
+                    <li>Data Visualization</li>
+                    <li>Html & Css</li>
+                    <li>Core Java</li>
+                    <li>Core Python</li>
+                    <li>Version Control/Git</li>
+                    <li>RDBMS</li>
+                </ul>
+              </div>
+          </div>
+      </div>
+      <div class="right-side">
+          <div class="section">
+              <div class="section-title">Career Objective</div>
+              <p>Secure a responsible career to fully utilize my training skills to develop the entire organization that will enrich and nurture my skills, which helps me in developing my goals and supporting the organization.</p>
+          </div>
+          <div class="section">
+              <div class="section-title">Projects</div>
+              <p>Project 1: Description</p>
+              <p>Project 2: Description</p>
+          </div>
+          <div class="section">
+              <div class="section-title">Certifications and Training</div>
+              <div class="carousel">
+                  <img src="./static/img/certificates/Applying AI.png" style="border-radius: 0%;" alt="Certification 1" class="active">
+                  <img src="./static/img/certificates/Building a Website.jpg" style="border-radius: 0%;" alt="Certification 2">
+                  <img src="./static/img/certificates/ChatGPT.jpg" style="border-radius: 0%;" alt="Certification 3">
+                  <img src="./static/img/certificates/communication skills.png" style="border-radius: 0%;" alt="Certification 4">
+                  <img src="./static/img/certificates/crash course on soft skills for interviews.png" style="border-radius: 0%;" alt="Certification 5">
+                  <img src="./static/img/certificates/CSS.jpg" style="border-radius: 0%;" alt="Certification 6">
+                  <img src="./static/img/certificates/Data Science Foundations.png" style="border-radius: 0%;" alt="Certification 7">
+                  <img src="./static/img/certificates/Git.jpg" style="border-radius: 0%;" alt="Certification 8">
+                  <img src="./static/img/certificates/html.jpg" style="border-radius: 0%;" alt="Certification 9">
+                  <img src="./static/img/certificates/HTML Advanced.jpg" style="border-radius: 0%;" alt="Certification 10">
+                  <img src="./static/img/certificates/interest calculator using Html,Css & Js.png" style="border-radius: 0%;" alt="Certification 11">
+                  <img src="./static/img/certificates/interrview skills.png" style="border-radius: 0%;" alt="Certification 12">
+                  <img src="./static/img/certificates/introduction to r.png" style="border-radius: 0%;" alt="Certification 13">
+                  <img src="./static/img/certificates/introduction to soft skills.png" style="border-radius: 0%;" alt="Certification 14">
+                  <img src="./static/img/certificates/Java Servlets and JSP.jpg" style="border-radius: 0%;" alt="Certification 15">
+                  <img src="./static/img/certificates/Python 3.jpg" style="border-radius: 0%;" alt="Certification 16">
+                  <img src="./static/img/certificates/rdbms.jpg" style="border-radius: 0%;" alt="Certification 17">
+                  <img src="./static/img/certificates/Resume building.png" style="border-radius: 0%;" alt="Certification 18">
+                  <img src="./static/img/certificates/sql.jpg" style="border-radius: 0%;" alt="Certification 19">                  
+                  <div class="text">Certification 1 Description</div>
+                  <div class="carousel-buttons">
+                      <button onclick="prevImage()">&#10094;</button>
+                      <button onclick="nextImage()">&#10095;</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </fieldset>
+  <script>
+      let currentIndex = 0;
+      const images = document.querySelectorAll('.carousel img');
+      const texts = [
+          'This certifies that Jovardhan Vijji has successfully completed the Ai in practice:Applying Ai course on June 05, 2024, through edX.',
+          'This certifies that Jovardhan Vijji has successfully completed the Building a website course on June 26, 2024, through Programming Hub.',
+          'This certifies that Jovardhan Vijji has successfully completed the ChatGpt course on June 26, 2024, through Programming Hub.',
+          'This certifies that Jovardhan Vijji has successfully completed the Communication Skills course on oct 29, 2023, through tcs ion.',
+          'This certifies that Jovardhan Vijji has successfully completed the crash course on spoft skills course on nov, 2023, through great Learning.',
+          'This certifies that Jovardhan Vijji has successfully completed the CSS course on June 26, 2024, through Programming Hub.',
+          'This certifies that Jovardhan Vijji has successfully completed the Data Science Foundations course on oct, 2024, through Great Learning.',
+          'This certifies that Jovardhan Vijji has successfully completed the Git course on June 26, 2024, through Programming Hub.',
+          'This certifies that Jovardhan Vijji has successfully completed the Html course on mar 10, 2024, through Programming Hub.',
+          'This certifies that Jovardhan Vijji has successfully completed the Html Advanced course on mar 28, 2024, through Programming Hub.',
+          'This certifies that Jovardhan Vijji has successfully completed the Intrest calculator using Html , css & Js on may 31, 2024, through edX.',
+          'This certifies that Jovardhan Vijji has successfully completed the interview skills course on oct 29, 2023, through tcs ion.',
+          'This certifies that Jovardhan Vijji has successfully completed the Introduction to r course on oct, 2023, through Great Learning.',
+          'This certifies that Jovardhan Vijji has successfully completed the Introduction to soft skills course on oct 30, 2023, through tcs ion',
+          'This certifies that Jovardhan Vijji has successfully completed the Java servlets and jsp course on June 28, 2024, through Programming Hub.',
+          'This certifies that Jovardhan Vijji has successfully completed the Python-3 course on June 26, 2024, through Programming Hub.',
+          'This certifies that Jovardhan Vijji has successfully completed the RDBMS course on June 26, 2024, through Programming Hub.',
+          'This certifies that Jovardhan Vijji has successfully completed the Resume Building course on nov, 2023, through Great Learning.',
+          'This certifies that Jovardhan Vijji has successfully completed the SQL course on June 26, 2024, through Programming Hub.',
+      ];
+      const textElement = document.querySelector('.carousel .text');
+
+      function showImage(index) {
+          images.forEach((img, i) => {
+              img.classList.remove('active');
+              if (i === index) {
+                  img.classList.add('active');
+                  textElement.textContent = texts[i];
+              }
+          });
+      }
+
+      function nextImage() {
+          currentIndex = (currentIndex + 1) % images.length;
+          showImage(currentIndex);
+      }
+
+      function prevImage() {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          showImage(currentIndex);
+      }
+
+      setInterval(nextImage, 3000); // Change image every 3 seconds
+  </script>
+    </div>
+    <div class="footer">
+      <div class="social-icons">
+          <a href="https://www.linkedin.com/in/aaruhi-ai-bot-361889315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="./static/img/linkedin_3536569.png" height="20" width="20"></a>
+          <a href="https://www.facebook.com/profile.php?id=61561541960481&mibextid=ZbWKwL"><img src="./static/img/facebook_733603.png" height="20" width="20"></a>
+          <a href="https://www.instagram.com/aaruhi_ai_bot"><img src="./static/img/instagram_3938052.png" height="20" width="20"></a>
+          <a href="mailto:aaruhiaibot411205@gmail.com"><img src="./static/img/envelope_9046102.png" height="20" width="20"></a>
+          <a href="https://x.com/Aaruhi_Ai_Bot?s=09"><img src="./static/img/twitter_5968830.png" height="20" width="20"></a>
+      </div>
+      <div class="contact-info">
+          <p>Phone: +1234567890</p>
+          <p>Email: aaruhiaibot411205@gmail.com</p>
+      </div>
+  </div>
+  </body>
+</html>
