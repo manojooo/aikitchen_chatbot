@@ -27,13 +27,13 @@
     background-attachment: scroll;
     
     /* Other styling to ensure the page is scrollable */
-    height: 2000px;
+    height: auto;
    /* Example height to enable scrolling */
     margin: 0;
     padding: 0;
 }
 .nav{
-        background-color: #333;
+    background-color: #333;
     color: #fff;
     padding: 10px 20px;
     display: flex;
@@ -69,9 +69,6 @@
 
   .dropdown5:hover .dropdown5-content {
     display: block;
-  }
-  span1{
-    margin-left: 100px;
   }
     </style>
     <link rel="stylesheet" href="./static/css/styles.css">
@@ -124,15 +121,17 @@
   <body>
     <div class="nav">
       <div class="dropdown5">
-        <img src="./static/img/logo.jpg" width="30" height="30"  onclick="toggleDropdown()">
+        <img src="./static/img/logo.avif" width="50" height="50"  onclick="toggleDropdown()">
         <div class="dropdown5-content" id="dropdownMenu">
           <a href="#home">Home</a>
           <a href="./about.html">About Us</a>
           <a href="./Features.html">Features</a>
           <a href="./index.html">Logout</a>
         </div>
-        <span style="font-size: 109%;font-family: 'Open Sans', sans-serif;">Aaruhi_Ai_Bot</span>
       </div>
+      <marquee style="color: white; font-size: 20px; font-weight: bold; border-radius: 15px; padding: 10px;">
+        Ai_Kitchen
+    </marquee>
       
       <script>
         function toggleDropdown() {
@@ -156,7 +155,7 @@
       <div class="widget">
         <div class="chat_header">
           <!--Add the name of the bot here -->
-          <span class="chat_header_title">Aaruhi</span>
+          <span class="chat_header_title">Ai_Kitchen</span>
           <span class="dropdown-trigger" href="#" data-target="dropdown1">
             <i class="material-icons"> more_vert </i>
           </span>
@@ -189,7 +188,7 @@
 
       <!--bot profile-->
       <div class="profile_div" id="profile_div">
-        <img class="imgProfile" src="./static/img/boto.gif"/>
+        <img class="imgProfile" src="./static/img/prop.jpg"/>
       </div>
 
       <!-- Bot pop-up intro -->
@@ -215,6 +214,11 @@
 
     <!--Chart.js Script -->
     <script type="text/javascript" src="static/js/lib/chart.min.js"></script>
-    <script type="text/javascript" src="static/js/lib/showdown.min.js"></script>    
+    <script type="text/javascript" src="static/js/lib/showdown.min.js"></script>
+    
+    <video autoplay muted loop style="position: fixed; top: 0; left: 0; width: 100%; height: auto; object-fit: cover; z-index: -1;">
+      <source src="./static/img/29887-378294357.mp4" type="video/mp4">
+
+    </video>
   </body>
 </html>

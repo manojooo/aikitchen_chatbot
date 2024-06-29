@@ -123,15 +123,17 @@
 <body>
 <div class="nav">
 <div class="dropdown">
-  <img src="./static/img/logo.jpg" width="30" height="30"  onclick="toggleDropdown()">
+  <img src="./static/img/logo.avif" width="50" height="50"  onclick="toggleDropdown()">
   <div class="dropdown-content" id="dropdownMenu">
     <a href="./home.html">Home</a>
     <a href="./about.html">About Us</a>
     <a href="#features">Features</a>
     <a href="./index.html">Logout</a>
   </div>
-  <span style="font-size: 100%;">Aaruhi_Ai_Bot</span>
 </div>
+<marquee style="color: white; font-size: 20px; font-weight: bold; border-radius: 15px; padding: 10px;">
+    Ai_Kitchen
+</marquee>
 
 <script>
   function toggleDropdown() {
@@ -148,160 +150,119 @@
   <legend>Features</legend>
   
   <div class="feature">
-      <img src="./static/img/nasa/edu_srch_astronomy_picture_of_the_day.webp" style="border-radius: 0;" alt="APOD Image">
+      <img src="./static/img/Recipe Suggestions and Customization.png" style="border-radius: 0;" alt="APOD Image">
       <div class="feature-details">
-          <div class="main-point">Astronomy Picture of the Day (APOD)</div>
+          <div class="main-point">Recipe Suggestions and Customization</div>
           <ul class="sub-point">
-              <li><strong>Feature</strong>: Provides a daily image or video with an explanation.</li>
-              <li><strong>API Endpoint</strong>: <code>/planetary/apod</code></li>
-              <li><strong>Data Provided</strong>: Title, explanation, date, URL of the image or video.</li>
+              <li><strong>Feature</strong>: Recipe Recommendations: Suggest recipes based on available ingredients, dietary preferences, and user favorites.</li>
+              <li><strong>API Endpoint</strong>:Customizable Recipes: Adjust recipes to accommodate dietary restrictions (e.g., gluten-free, vegan), portion sizes, and ingredient substitutions. <code>/planetary/apod</code></li>
+              <li><strong>Data Provided</strong>: Recipe Scaling: Automatically scale recipes up or down based on the number of servings needed.</li>
           </ul>
       </div>
   </div>
   <hr>
   
   <div class="feature">
-      <img src="./static/img/nasa/mars rover photo.jpeg" style="border-radius: 0;" alt="Mars Rover Photos Image">
+      <img src="./static/img/Visual Assistance.jpg" style="border-radius: 0;" alt="Mars Rover Photos Image">
       <div class="feature-details">
-          <div class="main-point">Mars Rover Photos</div>
+          <div class="main-point">Visual Assistance</div>
           <ul class="sub-point">
-              <li><strong>Feature</strong>: Access photos taken by Mars rovers (Curiosity, Opportunity, Spirit).</li>
-              <li><strong>API Endpoint</strong>: <code>/mars-photos/api/v1/rovers/{rover_name}/photos</code></li>
-              <li><strong>Data Provided</strong>: Rover name, camera details, image URLs, earth date, and Martian sol.</li>
+              <li><strong>Feature</strong>:Voice Command Integration: Hands-free interaction through voice commands for ease of use while cooking.
+              </li>
+              <li><strong>API Endpoint</strong>:Step-by-Step Visual Guidance: Display step-by-step instructions with images or videos to guide users through recipes.</li>
           </ul>
       </div>
   </div>
   <hr>
   
   <div class="feature">
-      <img src="./static/img/nasa/Earth Observatory Natural Event Tracker (EONET).jpeg" style="border-radius: 0;" alt="EONET Image">
+      <img src="./static/img/receipe_managment.jpg" style="border-radius: 0;" alt="EONET Image">
       <div class="feature-details">
-          <div class="main-point">Earth Observatory Natural Event Tracker (EONET)</div>
+          <div class="main-point">Ingredient Management</div>
           <ul class="sub-point">
-              <li><strong>Feature</strong>: Provides information on natural events observed by NASA.</li>
-              <li><strong>API Endpoint</strong>: <code>/eonet/v2.1/events</code></li>
-              <li><strong>Data Provided</strong>: Event title, description, categories, geometries, sources, and links.</li>
+              <li><strong>Feature</strong>:inventory Tracking: Keep track of pantry items and notify users when ingredients are running low. </li>
+              <li><strong>API Endpoint</strong>:Expiration Date Alerts: Monitor ingredient expiration dates and suggest recipes to use up ingredients before they go bad. </code></li>
+              <li><strong>Data Provided</strong>:Shopping List Integration: Automatically generate shopping lists based on selected recipes and inventory levels. </li>
           </ul>
       </div>
   </div>
   <hr>
   
   <div class="feature">
-      <img src="./static/img/nasa/Near Earth Object Web Service (NeoWs).jpeg" style="border-radius: 0;" alt="NeoWs Image">
+      <img src="./static/img/Nutritional Information.jpg" style="border-radius: 0;" alt="NeoWs Image">
       <div class="feature-details">
-          <div class="main-point">Near Earth Object Web Service (NeoWs)</div>
+          <div class="main-point"> Nutritional Information</div>
           <ul class="sub-point">
-              <li><strong>Feature</strong>: Information about asteroids and comets that are close to Earth.</li>
-              <li><strong>API Endpoint</strong>: <code>/neo/rest/v1/neo/browse</code></li>
-              <li><strong>Data Provided</strong>: Object name, estimated diameter, close approach data, orbit details.</li>
+              <li><strong>Feature</strong>: Nutritional Analysis: Provide detailed nutritional information for recipes, including calorie count, macros, and vitamins. </li>
+              <li><strong>API Endpoint</strong>:Dietary Goals Tracking: Help users track their dietary goals, such as calorie intake, protein consumption, and more. </li>
           </ul>
       </div>
   </div>
   <hr>
   
   <div class="feature">
-      <img src="./static/img/nasa/Exoplanet Archive.jpeg" style="border-radius: 0;" alt="Exoplanet Archive Image">
+      <img src="./static/img/Integration with Kitchen Appliances.webp" style="border-radius: 0;" alt="Exoplanet Archive Image">
       <div class="feature-details">
-          <div class="main-point">Exoplanet Archive</div>
+          <div class="main-point">Integration with Kitchen Appliances</div>
           <ul class="sub-point">
-              <li><strong>Feature</strong>: Data on exoplanets and their host stars.</li>
-              <li><strong>API Endpoint</strong>: <code>/exoplanet/</code></li>
-              <li><strong>Data Provided</strong>: Planet name, host star details, discovery method, and orbital parameters.</li>
+              <li><strong>Feature</strong>:Smart Appliance Control: Integrate with smart kitchen appliances (e.g., ovens, fridges) for automated control and monitoring.</li>
+              <li><strong>API Endpoint</strong>: Cooking Mode Syncing: Sync cooking modes with smart appliances for precise cooking settings.<code>/exoplanet/</code></li>
           </ul>
       </div>
   </div>
   <hr>
   
   <div class="feature">
-      <img src="./static/img/nasa/NASA Image and Video Library.jpeg" style="border-radius: 0;" alt="NASA Image and Video Library Image">
+      <img src="./static/img/User Profiles and PreferencesUser Profiles and Preferences.jpg" style="border-radius: 0;" alt="NASA Image and Video Library Image">
       <div class="feature-details">
-          <div class="main-point">NASA Image and Video Library</div>
+          <div class="main-point">User Profiles and Preferences</div>
           <ul class="sub-point">
-              <li><strong>Feature</strong>: Search and retrieve images, audio, and videos from NASA’s media library.</li>
-              <li><strong>API Endpoint</strong>: <code>/search</code></li>
-              <li><strong>Data Provided</strong>: Media type, title, description, date created, keywords, media URLs.</li>
+              <li><strong>Feature</strong>: User Profiles: Support multiple user profiles, each with personalized preferences and dietary restrictions.</li>
+              <li><strong>API Endpoint</strong>: Learning Capabilities: Learn user preferences over time to provide more tailored recommendations.</li>
           </ul>
       </div>
   </div>
   <hr>
   
   <div class="feature">
-      <img src="./static/img/nasa/International Space Station (ISS) Current Location.jpeg" style="border-radius: 0;" alt="ISS Location Image">
+      <img src="./static/img/Community Features.jpg" style="border-radius: 0;" alt="ISS Location Image">
       <div class="feature-details">
-          <div class="main-point">International Space Station (ISS) Current Location</div>
+          <div class="main-point"> Community Features</div>
           <ul class="sub-point">
-              <li><strong>Feature</strong>: Get the real-time location of the ISS.</li>
-              <li><strong>API Endpoint</strong>: <code>/iss-now.json</code></li>
-              <li><strong>Data Provided</strong>: Timestamp, latitude, longitude, message.</li>
+              <li><strong>API Endpoint</strong>: Recipe Sharing: Enable users to share their recipes and cooking experiences with others.</li>
+              <li><strong>Data Provided</strong>: Social Integration: Integrate with social media platforms for easy sharing of cooking achievements and recipes.</li>
           </ul>
       </div>
   </div>
   <hr>
   
   <div class="feature">
-      <img src="./static/img/nasa/Solar System Dynamics (SSD).jpeg" style="border-radius: 0;" alt="Solar System Dynamics Image">
+      <img src="./static/img/Feedback and Reviews.jpg" style="border-radius: 0;" alt="Solar System Dynamics Image">
       <div class="feature-details">
-          <div class="main-point">Solar System Dynamics (SSD)</div>
+          <div class="main-point">Feedback and Reviews</div>
           <ul class="sub-point">
-              <li><strong>Feature</strong>: Data on planetary positions, orbits, and physical characteristics.</li>
-              <li><strong>API Endpoint</strong>: <code>/ssd/api/v1</code></li>
-              <li><strong>Data Provided</strong>: Object name, orbital elements, physical parameters.</li>
+              <li><strong>Feature</strong>: User Reviews: Allow users to rate and review recipes.</li>
+              <li><strong>API Endpoint</strong>:Feedback Loop: Collect feedback to improve recipe suggestions and overall user experience</li>
           </ul>
       </div>
   </div>
   <hr>
   
   <div class="feature">
-      <img src="./static/img/nasa/Mars Weather Service API.jpeg" style="border-radius: 0;" alt="Mars Weather Service Image">
+      <img src="./static/img/Localization and Language Support.png" style="border-radius: 0;" alt="Mars Weather Service Image">
       <div class="feature-details">
-          <div class="main-point">Insight: Mars Weather Service API</div>
+          <div class="main-point">Localization and Language Support</div>
           <ul class="sub-point">
-              <li><strong>Feature</strong>: Provides the latest weather data from the Mars Insight lander.</li>
-              <li><strong>API Endpoint</strong>: <code>/insight_weather/</code></li>
+              <li><strong>Feature</strong>:Multilingual Support: Offer instructions and recipes in multiple languages. </li>
+              <li><strong>API Endpoint</strong>: Cultural Recipes: Include recipes from various cultures to cater to diverse user bases.</li>
               <li><strong>Data Provided</strong>: Sol (Martian day), temperature, wind speed, atmospheric pressure.</li>
           </ul>
       </div>
   </div>
   <hr>
-  
-  <div class="feature">
-      <img src="./static/img/nasa/EPIC (Earth Polychromatic Imaging Camera).jpeg" style="border-radius: 0;" alt="EPIC Image">
-      <div class="feature-details">
-          <div class="main-point">EPIC (Earth Polychromatic Imaging Camera)</div>
-          <ul class="sub-point">
-              <li><strong>Feature</strong>: Provides images of the Earth captured by the EPIC camera on the DSCOVR spacecraft.</li>
-              <li><strong>API Endpoint</strong>: <code>/EPIC/api/natural/images</code></li>
-              <li><strong>Data Provided</strong>: Image date, caption, image URL.</li>
-          </ul>
-      </div>
-  </div>
   <hr>
-  
-  <div class="feature">
-      <img src="./static/img/nasa/Image Metadata.jpeg" style="border-radius: 0;" alt="Image Metadata">
-      <div class="feature-details">
-          <div class="main-point">Image Metadata</div>
-          <ul class="sub-point">
-              <li><strong>Feature</strong>: Retrieve metadata for a specific image from the NASA Image and Video Library.</li>
-              <li><strong>API Endpoint</strong>: <code>/metadata/{image_id}</code></li>
-              <li><strong>Data Provided</strong>: Title, description, center, photographer, keywords, location, date created.</li>
-          </ul>
-      </div>
-  </div>
   <hr>
 </fieldset>
-<div class="footer">
-  <div class="social-icons">
-      <a href="https://www.linkedin.com/in/aaruhi-ai-bot-361889315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="./static/img/linkedin_3536569.png" height="20" width="20"></a>
-      <a href="https://www.facebook.com/profile.php?id=61561541960481&mibextid=ZbWKwL"><img src="./static/img/facebook_733603.png" height="20" width="20"></a>
-      <a href="https://www.instagram.com/aaruhi_ai_bot"><img src="./static/img/instagram_3938052.png" height="20" width="20"></a>
-      <a href="mailto:aaruhiaibot411205@gmail.com"><img src="./static/img/envelope_9046102.png" height="20" width="20"></a>
-      <a href="https://x.com/Aaruhi_Ai_Bot?s=09"><img src="./static/img/twitter_5968830.png" height="20" width="20"></a>
-  </div>
-  <div class="contact-info">
-      <p>Phone: +1234567890</p>
-      <p>Email: aaruhiaibot411205@gmail.com</p>
-  </div>
 </div>
 </body>
 </html>
