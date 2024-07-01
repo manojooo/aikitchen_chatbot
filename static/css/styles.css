@@ -1,6 +1,6 @@
 .nav{
   font-family: "Open Sans", sans-serif;
-    background-color: #333;
+    background-color: rgba(red, green, blue, alpha);
 color: #fff;
 padding: 10px 20px;
 display: flex;

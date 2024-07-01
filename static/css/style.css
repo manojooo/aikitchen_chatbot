@@ -7,21 +7,21 @@
   height: 500px;
   bottom: 5%;
   position: fixed;
-  background: #fff;
+  background: rgba(red, green, blue, alpha);
   border-radius: 10px 10px 10px 10px;
   box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16), 0 0px 5px 0 #00000096;
 }
 
 .chat_header {
   height: 60px;
-  background: #060dcfc7;
+  background: rgba, green, blue, alpha);
   border-radius: 10px 10px 0px 0px;
   padding: 5px;
   font-size: 20px;
 }
 
 .chat_header_title {
-  color: white;
+  color: black;
   float: left;
   margin-top: 3%;
   margin-left: 35%;
